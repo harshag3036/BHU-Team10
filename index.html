@@ -20,7 +20,7 @@
 
     <header>
         <div class="container">
-            <div class="row row-header">
+            <div class="row">
                 <div class="col-12">
                     <h1>Team 10 - Trade Charts</h1>
                     <hr>
@@ -35,12 +35,14 @@
                 <div class="card">
                   <div class="card-body">
                     <!-- Search Box -->
-                    <div class="input-group mb-3"> 
-                        <input type="text" class="form-control" placeholder="Search Stock">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" style="max-height: 38px"><i class="fa fa-search"></i></button>
+                    <form> <!-- form me action attribute laga lena ki data kahan bhejna hai -->
+                        <div class="input-group mb-3"> 
+                            <input type="text" class="form-control" id="search" placeholder="Search Stock">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary" style="max-height: 38px"><i class="fa fa-search"></i></button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <p>Recent Searches:
                         <ol class="list-unstyled">
                             <li>1</li>
@@ -58,11 +60,11 @@
                 <p>
                     Company info goes here.
                 </p>
-                <form> <!-- form me action attribute laga lena ki data kahan send karna hai -->
+                <form> <!-- action attribute laga lena ki data kahan send karna hai -->
                     <div class="form-group row">
                         <label for="Date" class="col-md-2 col-form-label">Date:</label>
                         <div class="col-md-3">
-                            <input type="date" class="form-control" name="date">
+                            <input type="date" class="form-control" id="Date">
                         </div>
                     </div>
                     <div class="form-group row">
