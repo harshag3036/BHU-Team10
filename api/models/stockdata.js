@@ -1,10 +1,24 @@
-import mongoose from 'mongoose';
+//Creating Schema For stocks
+
+const  mongoose = require('mongoose');
 
 const stockSchema = mongoose.Schema({
-        close: Decimal128,
-        high: Decimal128,
-        low: Decimal128,
-        open: Decimal128,
+        close: {
+            type:Number,
+            default:0,
+          },
+        high: {
+            type:Number,
+            default:0,
+          },
+        low: {
+            type:Number,
+            default:0,
+          },
+        open: {
+            type:Number,
+            default:0,
+          },
         symbol: {
             type:String,
             default:'',
@@ -41,16 +55,46 @@ const stockSchema = mongoose.Schema({
             type:Number,
             default:0,
           },
-        uOpen: Decimal128,
-        uClose: Decimal128,
-        uHigh: Decimal128,
-        uLow: Decimal128,
-        uVolume: Decimal128,
-        fOpen: Decimal128,
-        fClose: Decimal128,
-        fHigh: Decimal128,
-        fLow: Decimal128,
-        fVolume: Decimal128,
+        uOpen: {
+            type:Number,
+            default:0,
+          },
+        uClose: {
+            type:Number,
+            default:0,
+          },
+        uHigh: {
+            type:Number,
+            default:0,
+          },
+        uLow: {
+            type:Number,
+            default:0,
+          },
+        uVolume: {
+            type:Number,
+            default:0,
+          },
+        fOpen: {
+            type:Number,
+            default:0,
+          },
+        fClose: {
+            type:Number,
+            default:0,
+          },
+        fHigh: {
+            type:Number,
+            default:0,
+          },
+        fLow: {
+            type:Number,
+            default:0,
+          },
+        fVolume: {
+            type:Number,
+            default:0,
+          },
         label: {
             type:String,
             default:'',
@@ -71,4 +115,4 @@ const stockSchema = mongoose.Schema({
 
 const stock=mongoose.model('stock',stockSchema);
 
-export default stock;
+module.exports=stock;
