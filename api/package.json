@@ -1,0 +1,26 @@
+{
+  "name": "bhu-team10",
+  "version": "1.0.0",
+  "description": "\"OHLC Engine\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivekjaipur/BHU-team10.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivekjaipur/BHU-team10/issues"
+  },
+  "homepage": "https://github.com/vivekjaipur/BHU-team10#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
