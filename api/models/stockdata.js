@@ -1,37 +1,70 @@
 import mongoose from 'mongoose';
 
 const stockSchema = mongoose.Schema({
-        "close": 129.41,
-        "high": 133.6116,
-        "low": 126.76,
-        "open": 133.52,
-        "symbol": "AAPL",
-        "volume": 143301887,
-        "id": "HISTORICAL_PRICES",
-        "key": "AAPL",
-        "subkey": "",
-        "date": "2021-01-04",
-        "updated": 1628263122000,
-        "changeOverTime": 0,
-        "marketChangeOverTime": 0,
-        "uOpen": 133.52,
-        "uClose": 129.41,
-        "uHigh": 133.6116,
-        "uLow": 126.76,
-        "uVolume": 143301887,
-        "fOpen": 132.8956,
-        "fClose": 128.8048,
-        "fHigh": 132.9868,
-        "fLow": 126.1672,
-        "fVolume": 143301887,
-        "label": "Jan 4, 21",
-        "change": 0,
-        "changePercent": 0,
+        close: Decimal128,
+        high: Decimal128,
+        low: Decimal128,
+        open: Decimal128,
+        symbol: {
+            type:String,
+            default:'',
+          },
+        volume: {
+            type:Number,
+            default:0,
+          },
+        id: {
+            type:String,
+            default:'',
+          },
+        key: {
+            type:String,
+            default:'',
+          },
+        subkey: {
+            type:String,
+            default:'',
+          },
+        date:  {
+            type:Date,
+            default:new Date()
+        },
+        updated: {
+            type:Date,
+            default:new Date()
+        },
+        changeOverTime: {
+            type:Number,
+            default:0,
+          },
+        marketChangeOverTime: {
+            type:Number,
+            default:0,
+          },
+        uOpen: Decimal128,
+        uClose: Decimal128,
+        uHigh: Decimal128,
+        uLow: Decimal128,
+        uVolume: Decimal128,
+        fOpen: Decimal128,
+        fClose: Decimal128,
+        fHigh: Decimal128,
+        fLow: Decimal128,
+        fVolume: Decimal128,
+        label: {
+            type:String,
+            default:'',
+          },
+        change: {
+            type:Number,
+            default:0,
+          },
+        changePercent: {
+            type:Number,
+            default:0,
+          },
 
-    close:Decimal128,
-    high:Decimal128,
-    low:Decimal128,
-    open:Decimal128,
+    
     
 
 });
