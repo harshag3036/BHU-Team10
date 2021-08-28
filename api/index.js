@@ -7,12 +7,24 @@ const getstocksymbol = require('./controllers/stocksymbol');
 
 const app = express();
 const dotenv = require("dotenv");
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
 
 dotenv.config();
 app.use(cors());
+
+
+module.exports = function(app) {
+  app.use(
+    '/stock',
+    createProxyMiddleware({
+      target: 'http://localhost:3000',
+      changeOrigin: true,
+    })
+  );
+};
 
 app.get('/stock',getstocksdata);
 app.get('/', function(req, res){

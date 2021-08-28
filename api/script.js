@@ -1,8 +1,9 @@
 window.addEventListener('load', fetchStocks);
 
 async function fetchStocks() {
-    const response = await fetch('localhost:3000/stock');
+    const response = await fetch('http://localhost:3000/stock');
+    const stocks = await response.json();
     // waits until the request completes...
-    console.log(response);
+    console.log(stocks);
     
   }
