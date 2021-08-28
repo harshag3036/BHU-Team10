@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/vivekjaipur/BHU-team10.git"
   },
+  "proxy": "http://localhost:3000",
   "author": "",
   "license": "ISC",
   "bugs": {
