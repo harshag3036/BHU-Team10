@@ -15,7 +15,7 @@ const getstocksdata=async(req,res)=>{
         const stocks = await stock.find();
         res.status(200).json(stocks);
  
-        console.log('stocks',stocks);
+        //console.log('stocks',stocks);
     }
     catch(error){
      res.status(404).json({message:error.message});

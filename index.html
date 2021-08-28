@@ -38,10 +38,12 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="input-group mb-3"> 
-                        <input type="text" class="form-control" placeholder="Search Stock">
+                        <form action="/stocksymbol" method="POST">
+                        <input type="text" class="form-control" name="symbol" placeholder="Search Stock" type="text">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" style="max-height: 38px"><i class="fa fa-search"></i></button>
+                            <button class="btn btn-primary" type ="submit" style="max-height: 38px"><i class="fa fa-search"></i></button>
                         </div>
+                        </form>
                     </div>
                     <p>Recent Searches:
                         <ol class="list-unstyled">
@@ -55,17 +57,18 @@
             
             <div class="col-9">
                 <h2>Stock Name</h2>
-                <form>
+                <form action="/stockdate" method="POST">
                     <div class="form-group row">
-                        <label for="Date" class="col-md-2 col-form-label">Date:</label>
+                        <label for="Start Date" class="col-md-2 col-form-label">Start Date:</label>
                         <div class="col-md-3">
-                            <input type="date" class="form-control" name="date">
+                            <input type="date" class="form-control" name="startdate">
                         </div>
+                       
                     </div>
                     <div class="form-group row">
                         <label class="col-2">Time Range:</label>
                         <div class="col-3">
-                            <select class="form-control" id="week">
+                            <select class="form-control" name="week" id="week">
                                 <option>0</option>
                                 <option>1</option>
                                 <option>2</option>
@@ -75,8 +78,8 @@
                         </div>
 
                         <div class="col-3">
-                            <select class="form-control" id="month">
-                                <option>0</option>
+                            <select class="form-control" name="month" id="month">
+                              <option>0</option>
                               <option>1</option>
                               <option>2</option>
                               <option>3</option>
@@ -85,12 +88,15 @@
                               <option>6</option>
                               <option>7</option>
                               <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
                             </select>
                             <label for="month">Month</label>
                         </div>
 
                         <div class="col-3">
-                            <select class="form-control" id="year">
+                            <select class="form-control" name="year" id="year">
                                 <option>0</option>
                               <option>1</option>
                             </select>
@@ -100,7 +106,7 @@
                     <div class="form-group row">
                         <label for="chart" class="col-2">Chart Type:</label>
                         <div class="col-5">
-                            <select class="form-control" id="chart">
+                            <select class="form-control" name="chart" id="chart">
                               <option>OHLC</option>
                               <option>Candlestick</option>
                               <option>Coloured Bar</option>
